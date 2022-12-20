@@ -8,7 +8,7 @@ let weather = {
     "apiKey": '02cb241d4a039843891607d4ffbf297b',
     fetchLocation: function(city){
       pos.Cname = city;
-      fetch("http://api.openweathermap.org/geo/1.0/direct?q="+city+"&limit=5&appid=02cb241d4a039843891607d4ffbf297b")
+      fetch("https://api.openweathermap.org/geo/1.0/direct?q="+city+"&limit=5&appid=02cb241d4a039843891607d4ffbf297b")
       .then((response) => response.json()).then((data) => {
           pos.lat = data[0].lat
           pos.lon = data[0].lon
